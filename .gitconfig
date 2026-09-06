@@ -1,0 +1,9 @@
+[user]
+	email = migmig095@gmail.com
+	name = Miloš Šilhár
+[core]
+	autocrlf = input
+[init]
+	defaultbranch = main
+[pull]
+	rebase = true
