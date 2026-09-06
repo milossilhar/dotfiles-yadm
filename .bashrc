@@ -11,4 +11,10 @@ source "$OMARCHY_PATH/default/bash/rc"
 # Add your own exports, aliases, and functions here.
 #
 # Make an alias for invoking commands you use constantly
-# alias p='python'
+alias la='ls -a'
+alias j='just'
+
+# functions
+curlw() {
+  curl -w "\nstatus=%{http_code} %{redirect_url} size=%{size_download} time=%{time_total} content-type=\"%{content_type}\"\n" "$@";
+}
