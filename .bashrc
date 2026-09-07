@@ -13,6 +13,7 @@ source "$OMARCHY_PATH/default/bash/rc"
 # Make an alias for invoking commands you use constantly
 alias la='ls -a'
 alias j='just'
+alias jg='just -g'
 
 # functions
 curlw() {
