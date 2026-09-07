@@ -36,15 +36,15 @@ POSTGRES_PASSWORD := 'dugong'
 
 # start postgres service in docker
 @start:
-  docker compose -f {{POSTGRES}} up -d
+  sudo docker compose -f {{POSTGRES}} up -d
 
 # stops postgres service in docker
 @stop:
-  docker compose -f {{POSTGRES}} down
+  sudo docker compose -f {{POSTGRES}} down
 
 # removes postgres (inluding volume)
 @remove:
-  ../yesno.sh && docker compose -f {{POSTGRES}} down -v || echo
+  ../yesno.sh && sudo docker compose -f {{POSTGRES}} down -v || echo
 
 # shows pass for local postgres database
 @pass:
