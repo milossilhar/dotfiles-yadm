@@ -34,6 +34,16 @@
     "when": "!terminalFocus && !suggestWidgetVisible && !inQuickOpen && vim.active && vim.mode != 'Insert'",
   },
   {
+    "key": "alt+enter",
+    "command": "workbench.action.moveEditorToRightGroup",
+    "when": "!terminalFocus && !suggestWidgetVisible && !inQuickOpen && vim.active && vim.mode != 'Insert'",
+  },
+  {
+    "key": "alt+shift+enter",
+    "command": "workbench.action.moveEditorToBelowGroup",
+    "when": "!terminalFocus && !suggestWidgetVisible && !inQuickOpen && vim.active && vim.mode != 'Insert'",
+  },
+  {
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "!terminalFocus && !suggestWidgetVisible && !inQuickOpen && vim.active && vim.mode != 'Insert'",

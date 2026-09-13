@@ -23,6 +23,7 @@
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
+  "editor.rulers": [160],
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 160,
@@ -57,6 +58,7 @@
   "terminal.integrated.showExitAlert": false,
   "vim.handleKeys": {
     "<C-a>": false,
+    "<C-b>": false,
     "<C-c>": false,
     "<C-f>": false,
     "<C-p>": false,
@@ -128,4 +130,5 @@
   "update.mode": "none",
   "workbench.colorTheme": "Catppuccin Mocha",
   "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.composer.textSizeScale": 1.15,
 }
