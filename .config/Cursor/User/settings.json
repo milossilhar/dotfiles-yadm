@@ -11,6 +11,7 @@
   "[svg]": {
     "editor.defaultFormatter": "jock.svg",
   },
+  "css.lint.unknownAtRules": "ignore",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "solid",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -131,4 +132,6 @@
   "workbench.colorTheme": "Catppuccin Mocha",
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.composer.textSizeScale": 1.15,
+  "workbench.agentsWindowButton.enabled": false,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
 }
