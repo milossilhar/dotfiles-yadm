@@ -63,6 +63,7 @@
     "<C-c>": false,
     "<C-f>": false,
     "<C-p>": false,
+    "<C-l>": false,
     "<C-v>": false,
     "<C-w>": false,
     "<C-x>": false,
