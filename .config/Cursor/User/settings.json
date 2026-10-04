@@ -51,7 +51,6 @@
   "git.openRepositoryInParentFolders": "never",
   "json.schemaDownload.enable": true,
   "prettier.resolveGlobalModules": true,
-  "redhat.telemetry.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
   "svg.preview.mode": "svg",
   "terminal.integrated.cursorBlinking": true,

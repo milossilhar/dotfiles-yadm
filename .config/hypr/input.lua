@@ -17,7 +17,7 @@ hl.config({
     -- repeat_delay = 250,
 
     -- Start with numlock on by default.
-    -- numlock_by_default = true,
+    numlock_by_default = true,
 
     -- Increase sensitivity for mouse/trackpad (default: 0).
     sensitivity = 0,
