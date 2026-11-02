@@ -129,9 +129,10 @@
   "cursor.composer.showEmptyStateTips": false,
   "cursor.composer.conversationDensity": "compact-ungrouped",
   "update.mode": "none",
-  "workbench.colorTheme": "Catppuccin Mocha",
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.composer.textSizeScale": 1.15,
   "workbench.agentsWindowButton.enabled": false,
   "vim.mouseSelectionGoesIntoVisualMode": false,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Kimbie Dark",
 }
