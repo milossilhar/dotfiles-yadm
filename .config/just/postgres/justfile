@@ -14,10 +14,11 @@ POSTGRES_PASSWORD := 'dugong'
 @create dbname:
   PGPASSWORD={{POSTGRES_PASSWORD}} psql -d postgres -h localhost -p 5432 -U postgres -c "CREATE DATABASE {{dbname}}"
 
-# drops existing database with given name
+# drops existing database with given name [asks before proceeding]
 @drop dbname:
   ../yesno.sh && PGPASSWORD={{POSTGRES_PASSWORD}} psql -d postgres -h localhost -p 5432 -U postgres -c "DROP DATABASE {{dbname}}"
 
+# recreates the database (drop, create) [asks before proceeding]
 @recreate dbname:
   ../yesno.sh && \
   PGPASSWORD={{POSTGRES_PASSWORD}} psql -d postgres -h localhost -p 5432 -U postgres -c "DROP DATABASE {{dbname}}" && \
@@ -27,10 +28,17 @@ POSTGRES_PASSWORD := 'dugong'
 @list:
   PGPASSWORD={{POSTGRES_PASSWORD}} psql -l -h localhost -p 5432 -U postgres
 
-@restore file dbname format='c':
-  PGPASSWORD={{POSTGRES_PASSWORD}} pg_restore -h localhost -p 5432 -U postgres --dbname={{dbname}} --format={{format}} {{file}}
+# test restoring database from pg_dump file
+[no-cd]
+@restore db file format='c':
+  PGPASSWORD={{POSTGRES_PASSWORD}} pg_restore -h localhost -p 5432 -U postgres --dbname={{db}} --format={{format}} {{file}}
 
-# connects to choosen db (default postgres)
+# runs commands from file against chosen db
+[no-cd]
+@run db file:
+  PGPASSWORD={{POSTGRES_PASSWORD}} psql --set ON_ERROR_STOP=1 -d {{db}} -h localhost -p 5432 -U postgres -f {{file}}
+
+# connects to choosen db 
 @connect db='postgres':
   PGPASSWORD={{POSTGRES_PASSWORD}} psql -d {{db}} -h localhost -p 5432 -U postgres
 
